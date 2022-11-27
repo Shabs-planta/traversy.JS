@@ -1,0 +1,3564 @@
+
+   
+Topics Covering:
+
+1. Basics & Fundamentals
+2. DOM mainpulation & UI Events (no jquery)
+3. Object Oriented Programming - ES5 Pritotypes + ES6 Classes
+4. Asyns JS - Ajax, Fetch, Promises, Async\Await
+5. Error Handing, Regular Expressions, Localstorage
+6. Programming Scope, Arrow functions, Map, Set, Iterators
+7. Javascript Patterns
+8. Around 10 Projects
+9. Task List (DOM & LS)
+10. Loan Calculator
+11. Number guessing game
+12. Book Manager (OOP intro)
+13. EasyHTTP library (Fetch API)
+14. GitHub Finder (GitHUb API)
+15. Weather App (Weatherunderground API)
+16. Tracalorie (Module Pattern)
+17. CRUD App with ES6 Modules (Webpack)
+
+
+Mini Projects
+
+1. Chuck Norris Joke Generator
+2. Profile scroller (iterators)
+3. State Pattern Interface
+
+
+
+
+SRC: sources.
+
+             *Characters that can be inside of a variables*
+VAR: Letters, Numbers, _ and $.
+VAR: cant start with a number. 
+
+// multiples vars
+var firstName = 'bayo'; // Camel case
+var first_name = 'shabs'; // Underscore case
+var FirstName = 'tope'; // Pascal case
+
+
+             *Characters that can be inside of a LET*
+Let: works like Variables.
+
+
+             *Characters that can be inside of a Const*
+- const can not reassign a value.
+- const have to assign is value.
+
+             AN Object
+- an object can have more than a key value.
+
+
+TYPES OF DATA TYPES:
+* Primitive Data Types - Stored directly in the location the variable accesses stored on the stack.
+
+ -Primitive Data Types:
+1. string
+2. number
+3. boolean
+4. null
+5. underfined
+6. symbols (ES6)...
+
+ 
+*Reference Data Types - Accessed by reference, objects that are stored on the heap, A pointer to a location in memory
+  
+-References Data Types / Objects
+1. Arrays
+2. Object Literals
+3. Functions
+4. Dates 
+5. Anything ELse...
+
+
+ Javascripts is actually know as a Dynamically typed Language:
+
+1. Types are associated with values not variables
+2. the same variable can hold mutiple types
+3. we do not need to specify types
+4. Most other languages are sttically typed(java, c#, c++)
+5. There are supersets of JS and addons to allow static typing (Typescript, Flow)
+
+
+// Primitive Data
+
+// strings
+const coco = 'damoch';
+console.log(typeof coco);
+
+// numbers 
+const co = 35;
+console.log(typeof co);
+
+// boolean 
+const house = true;
+console.log(typeof house);
+
+// Null
+const car = null;
+console.log(typeof car);
+
+// undefined
+let bayo;
+console.log(typeof bayo);
+
+
+// Reference Data
+
+// Array
+const motors = ['toyota', 'lexus', 'benz']
+console.log(typeof motors);
+
+// Object data
+const address = {
+   state: 'lagos',
+   country: 'nigeria',
+   no: 35
+}
+console.log(typeof address);
+
+// date date
+const today = new Date();
+console.log(today);
+
+console.log(typeof today);
+console.clear();
+
+
+
+// convert a number to a string
+val = String(8);
+val = String(384);
+val = String(2+9+4/2);
+val = String(4+4);
+// bool to string
+val = String(true);
+// array to string
+val = String([1,2,3,4,5,6])
+// null to string
+val = String(null)
+// object to string
+val = String({a:1, b:2});
+// date to string
+val = String(new Date());
+
+// tostring
+val = (30).toString();
+val = (['bayo','shabs']).toString();
+val = (new Date()).toString();
+val = (true).toString();
+
+*// outline 
+console.log(val);
+console.log(typeof val);
+console.log(val.length);
+console.clear();
+
+
+
+
+
+// String to numbers
+val = 5;
+// bool to number
+val = Number(true);
+val = Number(false);
+// null to number
+val = Number(null);
+// spring to number
+val = Number('hello')
+// array to number 
+val = Number([1,2,3,4])
+
+// parseint is an integer it doesnt come with a decimal point.
+val = parseInt('100');
+val = parseFloat('100.40')
+
+*
+// output
+console.log(val);
+console.log(typeof val);
+console.log(val.toFixed())
+console.clear();
+
+
+
+
+
+// Math object
+let sun;
+
+sun = Math.PI;
+sun = Math.E;
+sun = Math.round(2.6);
+sun = Math.ceil(2.3); // its roundUp to greater than with default
+sun = Math.floor(2.8); // it roundDowm to lesser than with default
+sun = Math.sqrt(81);
+sun = Math.abs(-5);
+sun = Math.pow(8,2);
+sun = Math.min(18,28,8,9,47,33,90,02,-10);
+sun = Math.max(18,28,8,9,47,33,90,02,-10);
+sun = Math.random();
+
+sun = Math.floor(Math.random() * 20 + 1);
+
+console.log(sun);
+console.clear();
+
+
+// length
+sweet = firstName1.length;
+
+// concat
+sweet = firstName1.concat(' ' + lastName1);
+
+// Change case
+sweet = firstName1.toUpperCase() + ' ' +  lastName1.toLowerCase();
+
+// Array 
+sweet = firstName1[7]
+
+// indexof
+sweet = firstName1.indexOf('l');
+sweet = firstName1.lastIndexOf('l');
+
+// charAt is to display what alfabet if figure it indicate
+sweet = firstName1.charAt('7');
+// Get last Char
+sweet = firstName1.charAt(firstName1.length - 1);
+
+// Substring 
+sweet = firstName1.substring(0,4);
+
+// slice (its an Array functions)
+sweet = firstName1.slice(0,4);
+sweet = firstName1.slice(-4);
+
+// split (its an Array functions)
+sweet = str.split(' ');
+sweet = tags.split(',');
+
+// Replace
+sweet = str.replace('shabs', 'tope');
+
+// includes: its an Boolean data
+sweet = str.includes('shas');
+
+
+*const number1 = [28,27,9,90,84,82,12,32];*
+// The length of Array
+val7 = number1.length;
+// check if is array (like a boolean)
+val7 = Array.isArray(number1);
+// get single value
+val7 = number1[4];
+val7 = number1[0];
+// instal into Array
+number1[3] = 100;
+// find index of value
+val7 = number1.indexOf(100);
+
+// add to th end
+val7 = number1.push(21);
+// add to the end
+val7 = number1.unshift(43);
+// take of number from end
+val7 = number1.pop()
+// take of number from front
+val7 = number1.shift()
+// splice
+val7 = number1.splice(1,2);
+// reverse
+val7 = number1.reverse();
+// concatanate
+val7 = number1.concat( number2);
+
+// sort contants alfabetically
+val7 = fruits.sort();
+// to sort numbers is by the "compare function"
+val7 = number2.sort(function(x,y){
+   return x - y;
+})
+
+
+
+***Object literal
+
+const person = {
+   firstname: 'shabs',
+   lastname: 'planta',
+   age: 27,
+   email: 'shabsplanta@gmail.com',
+   hobbies: ['Music', 'Sport', 'Fun'],
+   address: {
+      city: 'Ifako',
+      state: 'Lagos'
+   },
+   getBrithYear: function(){
+      return 2022 - this.age;
+   }
+}
+let val;
+
+
+
+val = person.firstname;
+val = person['lastname'];
+val = person.age;
+val = person.email;
+val = person.hobbies;
+val = person.hobbies[2];
+val = person.address.city;
+val = person.address['state'];
+val = person.getBrithYear();
+
+
+console.log(val);
+ 
+
+
+***DATE AND TIME
+
+const today = new Date();
+let birthday = new Date('05-12-2022');
+birthday = new Date('may 10 1996');
+let baby = new Date('jan-10-2005');
+
+
+let val;
+
+//requesting for an information.
+val = today;
+val = today.getMonth();
+val = today.getDate();
+val = today.getFullYear();
+val = today.getHours();
+val = today.getDay();
+val = today.getTime();
+val = today.getMinutes();
+val = today.getSeconds();
+val = today.getMilliseconds();
+val = today.getTimezoneOffset();
+
+
+//changing something in the data
+
+birthday.setMonth(4);
+birthday.setFullYear(2021);
+birthday.setDate(12);
+birthday.setHours(9);
+birthday.setMinutes(45);
+birthday.setSeconds(30);
+
+
+// IF STATEMENT AND COMPARISON OPERATORS
+
+// if (something){
+//    do something
+// } else {
+//    do something else
+// }
+
+const id = 100;
+
+// if - if is Equal to...
+if (id == 100){
+   console.log('CORRECT');
+}
+else {
+   console.log('INCORRECT');
+}
+
+// if - if is not Equal to...
+if (id != 100){
+   console.log('CORRECT');
+}
+else {
+   console.log('INCORRECT');
+}
+
+
+***// IF
+
+const num = '100';
+
+      // if - if is Equal to... value and type
+if (num === 100){
+   console.log('CORRECT');
+}
+else {
+   console.log('INCORRECT');
+}
+
+     // if - if is not Equal to...value and type
+if (num !== 100){
+   console.log('CORRECT');
+}
+else {
+   console.log('INCORRECT');
+}
+
+console.log(val);
+console.log(birthday);
+
+
+
+// Test id undefined 
+if (typeof id !== 'undefined'){
+   console.log('the ID is ' + id);
+}
+else {
+   console.log('NO ID');
+}
+
+
+// GREATER OR LESS
+if (id >= 200){
+   console.log('the ID is ' + id);
+}
+else {
+   console.log('NO ID');
+}
+
+if (id <= 200){
+   console.log('CORRECT');
+}
+else {
+   console.log('INCORRECT');
+}
+
+
+
+***//  LOGICAL OPERATORS
+
+const person = 'planta';
+const age = 18;
+
+  // AND = &&
+
+if(age > 0 && age <= 10){
+   console.log(age + ' Years old PERSON is a KID');
+}
+else if(age > 10 && age <= 20){
+   console.log(age + 'Years old PERSON is a TEENAGE');
+}
+else {
+   console.log(age + 'Years old PERSON is an ADULT');
+}
+
+   // OR = ||
+
+if(age < 16 || age > 60){
+   console.log('You are not qualified to run this race')
+}
+else {
+   console.log('WELCOME you have just been REGISTERED')
+}
+
+  // TERNARY OPERATOR 
+
+console.log(age === 18 ? 'CORRECT' : 'INCORRECT');
+
+  // WITHOUT BRACES
+
+if(age > 0 && age <= 17)
+console.log('YOU ARE A KID');
+else 
+console.log('YOU ARE AN ADULT');
+
+
+
+***// SWITCH (is the same thing as "IF" but in a more complex way...)
+
+const color = 'red';
+
+switch(color){
+   case 'red':
+   console.log('MY COLOR IS RED');
+   break;
+   case 'blue':
+   console.log('MY COLOR IS BLUE');
+   break;
+   default:
+   console.log('THE color is not blue nor red');
+   break;
+}
+
+
+
+let day;
+
+
+switch(new Date().getDay()){
+   case 0:
+    day = 'Sunday';
+    break;
+   case 1:
+    day = 'Monday';
+    break;
+   case 2:
+    day = 'Tuesday';
+    break;
+   case 3:
+    day = 'Wednesday';
+    break;
+   case 4:
+    day = 'Thursday';
+    break;
+   case 5:
+    day = 'Friday';
+    break;
+   case 6:
+    day = 'Saturday';
+    break;
+}
+
+console.log(`Today is ${day}`)
+
+
+// FUNCTION DECLARATIONS AND EXPRESSIONS
+
+// FUNCTION DECLARATION
+function greet(firstname = 'james', lastname = 'nana'){
+   // if(typeof firstname === 'undefined'){firstname = 'tayo'};
+   // if(typeof lastname === 'undefined'){lastname = 'chalimain'};
+   // console.log('hello');
+   return `Hello ${firstname} ${lastname}`;
+}
+
+// greet();
+console.log(greet(/*'shabs', 'planta'*/));
+
+
+// FUNCTION EXPRESSIONS
+const greeting = function(x = 4){
+   return x*x;
+}
+
+console.log(greeting(9));
+
+
+// IMMIDIATLEY INVOKABLE FUNCTION EXPRESSION
+
+(function(){
+   console.log('Hello Nigeria');
+})();
+
+(function(name){
+   console.log('Hello ' + name);
+})('Temitope');
+
+
+// PROPERTY METHOD (is a defination of "Function inside an Object")...
+const toto = {
+   add: function(){
+      console.log('Add Toto...');
+   },
+   edit: function(id){
+      console.log(`Edit toto ${id}`);
+   }
+}
+
+toto.delete = function(){
+   console.log('Delete TOTO...')
+}
+
+toto.add();
+toto.edit('shabs');
+toto.delete();
+
+
+let dodo;
+dodo = { 
+   call: function(id){
+   console.log(`i love dodo...${id}`);
+}
+}
+
+dodo.delete = function(){
+   console.log('yeah it was deleted');
+}
+
+dodo.call(44);
+dodo.delete();
+
+
+
+***// GENERAL LOOPS
+
+   // FOR loop
+
+for (let i = 0; i <= 10; i++){
+   // console.log('Number ' + i);
+
+   if (i === 2){
+      console.log('2 is my favourite number');
+      continue;
+   }
+
+   if (i === 7){
+      console.log('End by the commend of break')
+      break;
+   }
+
+   console.log(i); 
+}
+
+
+   // WHILE loop
+let k = 0;
+
+while (k <= 10){
+   console.log(`number ${k}`);
+   k++;
+}
+
+
+  // DO WHILE loop
+let i = 12;
+
+do {
+   console.log(`I love number ${i}`);
+   i++;
+}
+
+while(i <= 19);
+
+
+
+
+***// LOOPING though Array..
+const cars = ['Benz', 'Toyota', 'Camery', 'ford']
+
+// for (i=0; i < cars.length; i++){
+//    console.log(cars[i]);
+// }
+
+
+  // LOOPING through ARRAY WITH FOREACH.
+cars.forEach(function(car){
+   console.log(car);
+})
+
+  // MAP
+const users = [
+   {id: 1, name: 'john'},
+   {id: 2, name: 'james'},
+   {id: 3, name: 'chalimain'},
+   {id: 4, name: 'planta'}
+];
+
+const ids = users.map(function(user){
+   return user.id;
+})
+
+console.log(ids);
+
+  // FOR IN LOOP
+const user1 = {
+   firstName: 'shabs',
+   lastName: 'planta',
+   age: 23
+};
+
+for (let x in user1){
+   console.log(`${x}: ${user1[x]}`);
+}
+
+
+
+
+***// WINDOWS METHODS / OBJECTS / PROPERTIES...
+
+// 1- Alert.
+// alert('Hello Web-Developers');
+
+// 2- Prompt.
+/* const input = prompt('Whats your name.');
+   alert(input); */
+
+// 3- Confirm.
+/* if (confirm('Are you sure')){
+   console.log('yes');
+}
+else {
+   console.log('No');
+}; */
+
+let val;
+
+// 4- Outerheight & width.
+/* val = outerHeight;
+val = outerWidth; */
+
+// 5- Innerheight & width.
+/* val = innerHeight;
+val = innerWidth; */
+
+// 6- Scroll Points.
+/* val = window.scrolly;
+val = window.scrollX; */
+
+// 7- Location Object.
+/* val = window.location;
+val = window.location.href;
+val = window.location.hostname;
+val = window.location.port;
+val = window.location.search; */
+
+// 8- Redirect window
+/* window.location.href = 'www.google.com';
+   window.location.reload(); */
+
+//  Navigator Objects
+/* val = window.navigator;
+val = window.navigator.language;
+val = window.navigator.appName;
+val = window.navigator.appVersion;
+val = window.navigator.userAgent;
+val = window.navigator.platform;
+val = window.navigator.vendor; */
+
+console.log(val);
+
+
+
+***BLOCK SCOOP
+
+// "var" is not a block scoop...
+// "let" is a Block scoop...
+// "const" is a block scoop...
+
+
+
+                  ***** WHAT'S THE DOM *****
+Document Object Model
+
+let val;
+
+
+val = document;
+val = document.all;
+val = document.all[0];
+val = document.all.length;
+val = document.head;
+val = document.body;
+val = document.doctype;
+val = document.characterSet;
+val = document.URL;
+val = document.domain;
+val = document.contentType;
+
+val = document.links;
+val = document.links[0];
+val = document.links[0].id;
+val = document.links[0].className;
+val = document.links[2].classList;
+val = document.links[0].classList[0];
+
+val = document.images;
+val = document.scripts;
+val = document.scripts[0];
+val = document.scripts[2].getAttribute('src');
+
+let scripts = document.scripts;
+
+let scriptsarr = Array.from(scripts);
+
+scriptsarr.forEach(function(scripts){
+   console.log(scripts.getAttribute('src'));
+})
+
+
+
+console.log(val);
+
+
+
+***DOM SELECTOR...
+We have "single element selector" and "multiple element selector"
+
+// SINGLE ELEMENT SELECTOR
+// document.getElementById()
+
+// console.log(document.getElementById('task-title'));
+// // Get elements
+// console.log(document.getElementById('task-title').id);
+// console.log(document.getElementById('task-title').className);
+
+// DOM For Styling...
+// document.getElementById('task-title').style.background = 'black';
+// document.getElementById('task-title').style.color = 'white';
+// document.getElementById('task-title').style.padding = '10px';
+// // document.getElementById('task-title').style.display = 'none';
+
+
+// // CHANGE CONTENTS
+// document.getElementById('task-title').textContent = 'Task List';
+// document.getElementById('task-title').innerText = 'My Task';
+// document.getElementById('task-title').innerHTML = '<span style="color: red;">Task List</span>';
+
+
+// // THE OFFICIAL METHOD
+
+// const taskTitle = document.getElementById('task-title');
+
+// taskTitle.style.background = 'black';
+// taskTitle.style.color = 'white';
+// taskTitle.style.padding = '10px';
+
+// taskTitle.textContent = 'Task List';
+// taskTitle.innerText = 'My Task';
+// taskTitle.innerHTML = '<span style="color: red;">Task List</span>';
+
+
+
+// QUERY SELECTOR
+console.log(document.querySelector('#task-title'));
+console.log(document.querySelector('.task'));
+console.log(document.querySelector('h5'));
+
+document.querySelector('#task-title').style.color = 'red';
+document.querySelector('li').style.background = 'blue';
+document.querySelector('li').style.color = 'white';
+document.querySelector('li:last-child').style.color = 'blue';
+document.querySelector('li:nth-child(3)').textContent = 'My list';
+document.querySelector('li:nth-child(odd)').innerHTML = 'Hello World';
+document.querySelector('li:nth-child(even)').style.background = 'yellow';
+
+
+// // MULTIPLE ELEMENTS SELECTION...
+// // GET Element by classname
+// const items = document.getElementsByClassName('collection-item');
+// console.log(items);
+// console.log(items[1]);
+// items[0].style.color = 'red';
+// items[4].style.background = 'yellow';
+// items[4].textContent = 'Hello Developers';
+
+// const taskList = document.querySelector('ul').getElementsByClassName('collection-item');
+// console.log(taskList);
+
+
+
+// // GET Elements by Tagname
+
+// let lis = document.getElementsByTagName('li');
+// console.log(lis);
+// console.log(lis[1]);
+// lis[0].style.color = 'red';
+// lis[4].style.background = 'pink';
+// lis[4].innerHTML = '<span style="color: blue;">Hello Developers</span>';
+
+
+// // Convert HTML collection into Array...
+// lis = Array.from(lis);
+
+// lis.reverse();
+
+// lis.forEach(function(li, index){
+//    console.log(li.className)
+//    li.textContent = `${index} List`; 
+// });
+
+// console.log(lis);
+
+const items = document.querySelectorAll('ul.collection li.collection-item');
+
+items.forEach(function(items, index){
+   items.textContent = `${index} List`; 
+});
+
+const liOdd = document.querySelectorAll('li:nth-child(odd)');
+const liEven = document.querySelectorAll('li:nth-child(even)');
+
+liOdd.forEach(function(li, index){
+   li.style.background = '#ccc'; 
+});
+
+for(let i = 0; i < liEven.length; i++){
+   liEven[i].style.color = 'red';
+}
+
+console.log(liEven);
+
+
+// TRAVERSING THE DOM...
+ let val;
+
+ const list = document.querySelector('ul.collection');
+ const listItem = document.querySelector('li.collection-item:first-child');
+
+ val = list;
+ val = listItem;
+
+//  GET Child Nodes
+ val = list.childNodes;
+ val = list.childNodes[0];
+ val = list.childNodes[0].nodeName;
+ val = list.childNodes[0].nodeType;
+
+//  1 - Elements
+//  2 - Attribute (deprecated)
+//  3 - text node
+//  8 - Comment
+//  9 - document itself
+//  10 - doctype 
+ 
+//  GET children Element nodes
+ val = list.children;
+ val = list.children[1];
+ list.children[1].innerHTML = 'hello';
+//  Children of Children
+list.children[3].children[0].id = 'test-link';
+val = list.children[3].children;
+
+// First Child
+val = list.firstChild;
+val = list.firstElementChild;
+
+// Last Child
+val = list.lastChild;
+val = list.lastElementChild;
+
+// Count child element
+val = list.childElementCount;
+
+// GET Parents Nodes
+val = list.parentNode;
+val = listItem.parentNode;
+val = listItem.parentElement;
+val = listItem.parentElement.parentElement;
+
+// GET next Sibling
+val = listItem.nextSibling;
+val = listItem.nextElementSibling;
+val = listItem.nextElementSibling.nextElementSibling;
+val = listItem.nextElementSibling.style.color = 'red';
+listItem.nextElementSibling.nextElementSibling.previousElementSibling.style.color = 'blue';
+
+// GET Previous Sibling
+val = listItem.previousSibling;
+val = listItem.previousElementSibling;
+
+
+// list.children[3].children[0].onclick = function(){
+//    if (confirm('Are you sure you want to delete it.')) {
+//       val = list.children[3].style.display = 'none';
+//    }
+//    else {
+//       val = console.log(`I tried deleting ${list.children[3]}`)
+//    }
+// }
+// list.children[3].children[0].click = function(){
+//    val = list.children[3].style.display = 'none';
+// }
+
+
+ console.log(val);
+
+
+// CREATING ELEMENTS
+// Create Element...
+const li = document.createElement('li');
+
+// add className
+li.className = 'collection-item';
+// add id
+li.id = 'new item';
+// add attribute
+li.setAttribute('title', 'new title');
+// create a textNode and append...
+li.appendChild(document.createTextNode('Hello World'));
+
+// createElement...
+const list = document.createElement('a');
+// Add class
+list.className = 'delete-item secondary-content';
+// install with innerHTML.. or add icon html
+list.innerHTML = '<i class="fa fa-remove"></i>';
+// Append list to li...
+li.appendChild(list);
+
+
+
+// Append list to as child to task collection...
+document.querySelector('ul.collection').appendChild(li);
+li.style.color = 'blue';
+li.style.background = '#f2f2';
+
+
+console.log(li);
+console.log(list);
+
+
+***// REPLACE ELEMENT...
+// creating element
+const newHeading = document.createElement('h2');
+// add id
+newHeading.id = 'task title';
+// add claseName
+newHeading.className = 'task';
+// add text node
+newHeading.appendChild(document.createTextNode('Task List'));
+// get the oldheading
+const oldHeading = document.getElementById('task-title');
+// Parent
+const cardAction = document.querySelector('.card-action');
+// REPLACE
+cardAction.replaceChild(newHeading, oldHeading);
+
+
+// REMOVE ELEMENT
+const lis = document.querySelectorAll('li');
+const list = document.querySelector('ul.collection')
+
+// Remove item
+lis[0].textContent = 'Blue man';
+lis[0].remove();
+
+// Remove From list
+list.children[0].textContent = 'Red Man';
+list.children[0].remove();
+// OR 
+list.removeChild(lis[3]);
+
+// CLASSES AND ATTRIBUTE
+const firstlis = document.querySelector('li:first-child');
+let link = firstlis.children[0];
+
+// classes
+val = link;
+val = link.className;
+val = link.classList;
+val = link.classList[0];
+val = link.classList.add('good');
+val = link.classList.remove('good');
+val = link;
+
+// attribute
+val = link.getAttribute('href');
+val = link.setAttribute('href', 'BIGboy');
+val = link.getAttribute('href');
+val = link.hasAttribute('href');
+val = link.removeAttribute('href');
+val = link;
+
+
+
+console.log(val);
+// console.log(newHeading);
+
+***// document.querySelector('.clear-tasks').addEventListener('click', 
+// function(e){
+//    console.log('Hello World');
+
+//    // e.preventDefault()
+// })
+
+document.querySelector('.clear-tasks').addEventListener('click', 
+onclick)
+function onclick(e) {
+   // console.log('Confirm');
+
+   let val;
+
+   // Event Target Element...
+   val = e;
+   val = e.target;
+   val = e.target.className;
+   val = e.target.classList;
+   val = e.target.textContent = 'Hello';
+   // Event type...
+   val = e.type;
+   // Event Timestamp
+   val = e.timeStamp;
+   // coords event relative to the window...
+   val = e.clientY;
+   val = e.clientX;
+   // Coords event relative to the Element...
+   val = e.offsetY;
+   val = e.offsetX;
+
+
+   console.log(val);
+}
+
+***// ADDEVENTLISTENER
+// Mouse event...
+const clickBtn = document.querySelector('a.clear-tasks');
+const card = document.querySelector('.card');
+const task = document.querySelector('h5');
+const lis = document.querySelectorAll('li');
+const liId = document.querySelector('li:nth-child(2)');
+
+// Click
+clickBtn.addEventListener('click', runEvent);
+// double click
+clickBtn.addEventListener('dblclick', runEvent);
+// mousedown
+clickBtn.addEventListener('mousedown', runEvent);
+// mouseup
+clickBtn.addEventListener('mouseup', runEvent);
+// mouseenter
+card.addEventListener('mouseenter', runEvent);
+// mouseleave
+card.addEventListener('mouseleave', runEvent);
+// mouseover
+clickBtn.addEventListener('mouseover', runEvent);
+// mouseout
+clickBtn.addEventListener('mouseout', runEvent)
+// mousemove
+card.addEventListener('mousemove', runEvent)
+
+
+function runEvent(e) {
+   console.log(`EVENT TYPE: ${e.type}`);
+   task.textContent = `CoordsY: ${e.clientY} CoordsX: ${e.clientX}`;
+   lis[3].textContent = `Mousemove: ${e.type}`;
+   liId.style.color = '#f4f';
+
+   document.body.style.backgroundColor = `rgb(${e.offsetY}, 60, ${e.offsetX})`;
+
+}
+
+
+
+***// keyboard & Input Events
+const from = document.querySelector('form');
+const InputTask = document.getElementById('task');
+const task = document.querySelector('h5');
+
+
+// empty the value input
+InputTask.value = ' ';
+
+// submit from
+from.addEventListener('submit', runEvent);
+// keydown
+InputTask.addEventListener('keydown', runEvent);
+// keyup
+InputTask.addEventListener('keyup', runEvent);
+// keypress
+InputTask.addEventListener('keypress', runEvent);
+// focus
+InputTask.addEventListener('focus', runEvent);
+// blur
+InputTask.addEventListener('blur', runEvent);
+// cut
+InputTask.addEventListener('cut', runEvent);
+// paste
+InputTask.addEventListener('paste', runEvent);
+// input
+InputTask.addEventListener('input', runEvent);
+
+// For select tag we can use a change Event..
+Select.addEventListener('change', runEvent);
+
+
+function runEvent(e){
+   console.log(`Event Type: ${e.type}`);
+
+   task.textContent = e.target.value;
+
+   // Get input value
+   console.log(e.target.value);
+   console.log('Event Value: ' + InputTask.value);
+
+
+   // e.preventDefault():
+}
+
+
+
+***// Event Bubbling & Delegation...
+document.querySelector('.card-action').addEventListener('click', function()
+{
+   console.log(`card-action`)
+});
+
+document.querySelector('.card-content').addEventListener('click', function()
+{
+   console.log(`card-content`)
+});
+
+document.querySelector('.card').addEventListener('click', function()
+{
+   console.log(`card`)
+});
+
+document.querySelector('.col').addEventListener('click', function()
+{
+   console.log(`col`)
+});
+
+
+// EVENT DELEGATION
+const delItem = document.querySelector('.delete-item');
+
+delItem.addEventListener('click', deleteItem);
+function deleteItem(e){
+   console.log('Delete Item');
+}
+
+document.body.addEventListener('click', deleteItem);
+function deleteItem(e){
+   // console.log(e.target.className);
+
+   // first check out the i tag
+   if(e.target.className === 'fa fa-remove'){
+      console.log('delete item');
+   }
+   // secondly check out the parent tag of i tag, which is the parentElement
+   if(e.target.parentElement.className === 'delete-item secondary-content'){
+      console.log('mother box');
+   }
+   // OR
+   if(e.target.parentElement.classList.contains('delete-item')){
+      e.target.parentElement.parentElement.remove();
+   }
+
+}
+
+const delItem = document.querySelector('ul.collection');
+delItem.addEventListener('click', deleteItem);
+function deleteItem(e){
+   if(e.target.parentElement.className === 'delete-item secondary-content'){
+      e.target.parentElement.parentElement.remove();
+   }
+   // OR 
+   if(e.target.parentElement.classList.contains('delete-item')){
+      e.target.parentElement.parentElement.remove();
+   }
+}
+
+
+
+***// LOCAL AND SESSION STORAGE...
+// Set Local Storage Item
+localStorage.setItem('name', 'john');
+localStorage.setItem('age', 35);
+
+// Set session Storage Item
+sessionStorage.setItem('name', 'shabs');
+
+// Remove From Storage
+localStorage.removeItem('name');
+
+const nameItem = localStorage.getItem('name');
+const age = localStorage.getItem('age');
+
+console.log(nameItem + ' ' + age);
+// localStorage.clear();
+
+const form = document.querySelector('form');
+
+
+form.addEventListener('submit', runEvent);
+function runEvent(e){
+   // const task = document.querySelector('task').value;
+   const inputItem = document.querySelector('input#task').value;
+   
+
+   let input;
+
+   if (localStorage.getItem('input') === null){
+      input = [];
+   }
+   else {
+      input = JSON.parse(localStorage.getItem('input'));
+   }
+
+   input.push(inputItem);
+
+   localStorage.setItem('input', JSON.stringify(input));
+   alert('Saved in Local Storage.');
+   // localStorage.clear();
+   // console.log(inputItem);
+
+   e.preventDefault();
+}
+
+const input = JSON.parse(localStorage.getItem('input'));
+
+input.forEach(function(inputItem){
+   console.log(inputItem);
+})
+
+
+
+***BUILDING A TASKLIST WEBSITE***
+
+/////INDEX.HTML...
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+   <title>Task LIst</title>
+</head>
+
+<body>
+   <div class="container">
+      <div class="row">
+         <div class="col s12">
+            <div id="main" class="card">
+               <div class="card-content">
+                  <span class="card-title">Task List</span>
+                  <div class="row">
+                     <form id="task-form">
+                        <div class="input-field col s12">
+                           <input type="text" name="task" id="task">
+                           <label for="task">New Task</label>
+                        </div>
+                        <input type="submit" value="Add Task" class="btn">
+                     </form>
+                  </div>
+               </div>
+               <div class="card-action">
+                  <h5 id="task-title">Task</h5>
+                  <div class="input-field col s12">
+                     <input type="text" name="filter" id="filter">
+                     <label for="filter">Filter Task</label>
+                  </div>
+                  <ul class="collection"></ul>
+                  <a href="#" class="clear-task btn black">Clear Task</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   <script src="app.js"></script>
+</body>
+</html>
+
+
+//////APP.JS
+
+// Define UI Vars...
+const form = document.querySelector('#task-form');
+const taskInput = document.querySelector('#task');
+const filter = document.getElementById('filter');
+const clearBtn = document.querySelector('a.clear-task');
+const taskList = document.querySelector('.collection');
+// const cardAction = document.querySelector('.card-action')
+
+// Call a function load EventListeners..
+loadEventListener();
+
+// Load all event listeners...
+function loadEventListener() {
+   // DOM event listner..
+   document.addEventListener('DOMContentLoaded', getTask);
+   // Add Task Event
+   form.addEventListener('submit', addTask);
+
+   // USing Event Delegation to delete li Element
+   taskList.addEventListener('click', deleteItem);
+
+   // USing clearBtn 
+   clearBtn.addEventListener('click', clearTasks);
+
+   // add filter
+   filter.addEventListener('keyup', filterTasks);
+   
+}
+// Get Task from LS
+function getTask(){
+   let tasks;
+
+   if (localStorage.getItem('tasks') === null){
+      tasks = [];
+   }
+   else {
+      tasks = JSON.parse(localStorage.getItem('tasks'));
+   }
+
+   // create a loop
+   tasks.forEach(function(task){
+
+      // Create "li" Element...
+      const li = document.createElement('li');
+      // Add class
+      li.className = 'collection-item';
+      // create a test node and append...
+      li.appendChild(document.createTextNode(task));
+      // Create an a tag
+      const link = document.createElement('a');
+      // Add CLassName
+      link.className = 'delete-item secondary-content';
+      // Add InnerHTML
+      link.innerHTML = '<i class="fa fa-remove"></i>';
+      // append link
+      li.appendChild(link);
+      // tasklist append li
+      taskList.appendChild(li);
+
+   })
+}
+
+function addTask(e) {
+   if(taskInput.value === '') {
+      alert('Fill New Task');
+      li.value = '';
+   }
+
+   // Create "li" Element...
+   const li = document.createElement('li');
+   // Add class
+   li.className = 'collection-item';
+   // create a test node and append...
+   li.appendChild(document.createTextNode(taskInput.value));
+   // Create an a tag
+   const link = document.createElement('a');
+   // Add CLassName
+   link.className = 'delete-item secondary-content';
+   // Add InnerHTML
+   link.innerHTML = '<i class="fa fa-remove"></i>';
+   // append link
+   li.appendChild(link);
+   // tasklist append li
+   taskList.appendChild(li);
+
+   // Store Task to local storage...
+   storeTaskInLocalStorage(taskInput.value);
+   
+   // clear taskinput value...
+   taskInput.value = '';
+
+   e.preventDefault();
+}
+
+// store task...
+function storeTaskInLocalStorage(task){
+   let tasks;
+
+   if (localStorage.getItem('tasks') === null){
+      tasks = [];
+   }
+   else {
+      tasks = JSON.parse(localStorage.getItem('tasks'));
+   }
+
+   tasks.push(task);
+   localStorage.setItem('tasks', JSON.stringify(tasks));
+   // alert('New task saved to localStorage');
+}
+
+
+function deleteItem(e){
+   if (e.target.parentElement.classList.contains('delete-item')) {
+      if (confirm('Are you sure!')) {
+         e.target.parentElement.parentElement.remove();
+
+      // remove form LS
+      removeTaskFromLocalStorage(e.target.parentElement.parentElement);
+      }
+      // console.log(e.target)
+   }
+}
+
+// Remove form LS
+function removeTaskFromLocalStorage(taskList) {
+   let tasks;
+
+   if (localStorage.getItem('tasks') === null){
+      tasks = [];
+   }
+   else {
+      tasks = JSON.parse(localStorage.getItem('tasks'));
+   }
+
+   tasks.forEach(function(task, index){
+      if(taskList.textContent === task){
+         tasks.splice(index, 1);
+      }
+   });
+
+   localStorage.setItem('tasks', JSON.stringify(tasks));
+}
+
+
+function clearTasks(){
+   // taskList.innerHTML = '';
+
+   // OR
+   while (taskList.firstChild) {
+      taskList.removeChild(taskList.firstChild);
+   }
+
+   // OR
+   // if (e.target.className === 'clear-task btn black'){
+   //    if (confirm('Are you sure')){
+   //       e.target.previousElementSibling.remove();
+   //    }
+   // }
+
+   // clearTAsk form LS
+   clearTasksFromLocalStorage();
+}
+
+// clearTAsk form LS
+function clearTasksFromLocalStorage(){
+   localStorage.clear();
+}
+
+// filter tasks
+function filterTasks(e){
+   const text = e.target.value.toLowerCase();
+
+   document.querySelectorAll('.collection-item').forEach(
+      function(task){
+         const item = task.firstChild.textContent;
+         if(item.toLowerCase().indexOf(text) != -1) {
+            task.style.display = 'block';
+         }
+         else {
+            task.style.display = 'none';
+         }
+      }
+   );
+}
+
+
+
+****LOAN CALCULATOR****
+////INDEX.HTML////
+
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <title>Loan Calculate </title>
+
+
+    <style>
+      #loading, #results {
+        display: none;
+      }
+    </style>
+
+  </head>
+
+
+
+  <body class="bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card card-body text-center mt-5">
+            <h1 class="heading display-5 pb-3">Loan Calculator</h1>
+            <form id="loan-form">
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon">$</span>
+                  <input type="number" class="form-control" id="amount" placeholder="Loan Amount">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon">%</span>
+                  <input type="number" class="form-control" id="interest" placeholder="Interest">
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control" id="years" placeholder="Years To Repay">
+              </div>
+              <div class="forn-group">
+                <input type="submit" value="Calculate" class="btn btn-dark btn-block">
+              </div>
+            </form>
+            <!-- LOADER -->
+            
+            <div id="loading">
+              <img src="img/loading.gif" alt="">
+            </div>
+           
+            <!-- RESULTS -->
+            <div id="results" class="pt-4">
+              <h5>Results</h5>
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon">Monthly Payment</span>
+                  <input type="number" class="form-control" id="monthly-payment" disabled>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon">Total Payment</span>
+                  <input type="number" class="form-control" id="total-payment" disabled>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon">Total Interest</span>
+                  <input type="number" class="form-control" id="total-interest" disabled>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
+
+
+////APP.JS////
+// listen for submit...
+document.getElementById('loan-form').addEventListener('submit', function(e){
+   // hide results
+   document.getElementById('results').style.display = 'none';
+   // show loading
+   document.getElementById('loading').style.display = 'block';
+
+   setTimeout(calculateResults, 2000);
+
+   e.preventDefault();
+});
+
+
+// Create function for calculateResult
+function calculateResults(){
+   // hide Result
+   document.getElementById('loading').remove();
+
+   // list UI vars
+   const amount = document.getElementById('amount');
+   const interest = document.getElementById('interest');
+   const years = document.getElementById('years');
+   const monthlyPayment = document.getElementById('monthly-payment');
+   const totalPayment = document.getElementById('total-payment');
+   const totalInterest = document.getElementById('total-interest');
+
+   const principal = parseFloat(amount.value);
+   const calculatedInterest = parseFloat(interest.value) / 100 / 12;
+   const calculatedPayments = parseFloat(years.value) * 12;
+
+   // compute Monthly payment
+   const x = Math.pow(1 + calculatedInterest, calculatedPayments);
+   const monthly = (principal*x*calculatedInterest)/(x-1);
+
+   if(isFinite(monthly)) {
+      monthlyPayment.value = monthly.toFixed(2);
+      totalPayment.value = (monthly * calculatedPayments).toFixed(2);
+      totalInterest.value = ((monthly * calculatedPayments)-principal).toFixed(2);
+
+      // show Result
+      document.querySelector('#results').style.display = 'block';
+   }
+    else{
+      // call function 
+      showError('Please check your numbers!');
+   }
+}
+
+// Show Error
+function showError(error){
+   // create a div
+   const errorDiv = document.createElement('div');
+
+   // Get elements
+   const card = document.querySelector('.card');
+   const heading = document.querySelector('.heading');
+
+
+   // Add class
+   errorDiv.className = 'alert alert-danger';
+   // create text node and append to "Div"
+   errorDiv.appendChild(document.createTextNode(error));
+
+   // insert Error above Heading...
+   card.insertBefore(errorDiv, heading);
+   // clear error after 3seconds.
+   setTimeout(clearError, 3000);
+}
+
+function clearError(){
+   document.querySelector('.alert').remove();
+}
+
+
+
+
+****NUMBER GUESSING****
+///INDEX.HTML....
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" integrity="sha512-5fsy+3xG8N/1PV5MIJz9ZsWpkltijBI48gBzQ/Z2eVATePGHOkMIn+xTDHIfTZFVb9GMpflF2wOWItqxAP2oLQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <title>Number Guesser</title>
+</head>
+
+
+<body>
+   <div class="container">
+      <h1>Number Guesser</h1>
+      <div id="game">
+         <p>Guess a number between <span class="min-num">1</span> and <span class="max-num">10</span></p>
+         <input type="number" id="guess-input" placeholder="Enter your guess.">
+         <input type="submit" value="Submit" id="guess-btn">
+         <p class="message"></p>
+      </div>
+   </div>
+
+
+
+   <script src="app.js"></script>
+</body>
+</html>
+
+
+
+/////APP.JS.....
+/* 
+GAME FUNCTION:
+- Player most guess a number between a "min" and "max"
+- Player gets a certain amount of guesses
+- Notify player of guesses remaining
+- Notify the player of the correct answer if losses
+- Let player choose to play again
+ */
+
+
+// Game values
+let min = 1,
+    max = 10,
+    winningNum = getRandomNumber(min, max),
+    guessesLeft = 3;
+
+
+// UI Elements
+const UIgame = document.querySelector('#game'),
+      UIminNum = document.querySelector('.min-num'),
+      UImaxNum = document.querySelector('.max-num'),
+      UIguessInput = document.querySelector('#guess-input'),
+      UIguessBtn = document.querySelector('#guess-btn'),
+      UImessage = document.querySelector('.message');
+
+// assign UI min and max
+UIminNum.textContent = min;
+UImaxNum.textContent = max;
+
+// play Again event listener 
+UIgame.addEventListener('mousedown', function(e){
+   if(e.target.className === 'play-again'){
+      window.location.reload();
+   }
+})
+
+// listen for guess
+UIguessBtn.addEventListener('click', submitBtn);
+function submitBtn(e){
+   let guess = parseInt(UIguessInput.value);
+   // console.log(guess);
+
+   if(isNaN(guess) || guess < min || guess > max){
+      // change borderColor
+      // UIguessInput.style.borderColor = 'red';
+      setMessage(`Please enter a number between ${min} and ${max}`, 'red');
+   }
+
+   // Check if won
+   if (guess === winningNum){
+      // Game over won
+
+      // // disable input
+      // UIguessInput.disabled = true;
+      // // change borderColor
+      // UIguessInput.style.borderColor = 'green';
+      // // set message
+      // setmessage(`${winningNum} is correct YOU WIN`, 'green');
+
+      // UIguessInput.value = '';
+
+      gameOver(true, `${winningNum} is correct YOU WIN!`);
+
+   }
+   else {
+      // wrong number
+      guessesLeft -= 1;
+
+      if (guessesLeft === 0){
+         // game over lost
+         
+         // // disable input
+         // UIguessInput.disabled = true;
+         // // change borderColor
+         // UIguessInput.style.borderColor = 'red';
+         // // set message
+         // setmessage(`Game over, you lost,${winningNum} is the correct number`, 'red');
+
+         gameOver(false, `Game over, you lost!, ${winningNum} is the correct number`)
+      }
+      else {
+         // game continues - answer wrong
+
+         // change borderColor
+         UIguessInput.style.borderColor = 'red';
+
+         // clear guess input
+         UIguessInput.value = '';
+
+         // tell users its wrong
+         setMessage(`${guess} is not correct, ${guessesLeft} guesses left`, 'red');
+
+      }
+   }
+
+}
+function gameOver(won, msg){
+   let color;
+   won === true ? color = 'green' : color = 'red';
+
+
+    // disable input
+    UIguessInput.disabled = true;
+    // change borderColor
+    UIguessInput.style.borderColor = color;
+    // Set textcolor
+    UImessage.style.color = color;
+    // set message
+    setMessage(msg);
+
+   //  change button value
+   UIguessBtn.value = 'Play again';
+   // add className
+   UIguessBtn.className += 'play-again';
+
+}
+
+// funtion of Random number
+function getRandomNumber(min, max){
+   return Math.floor(Math.random()*(max-min+1)+min);
+}
+
+// set message function.
+function setMessage(msg, color){
+   UImessage.style.color = color;
+   UImessage.textContent = msg;
+}
+
+
+
+
+*****JAVASCRIPTS SANDBOX SECTION 5.....
+
+const brad = {
+   UIname: 'Shabs',
+   UIage: 26
+};
+
+console.log(brad);
+
+// person constructor 
+function Person() {
+   this.ELname = 'Planta';
+}
+
+const planta = new Person();
+const bayo = new Person();
+
+
+console.log(bayo);
+
+// person constructor 
+function People(name, dob) {
+   this.ELname = name;
+   // this.ELage = age;
+   this.birthday = new Date(dob);
+   this.calculateAge = function(){
+      const diff = Date.now() - this.birthday.getTime();
+      const ageDate = new Date(diff);
+      return Math.abs(ageDate.getFullYear() - 1970);
+   }
+
+   // console.log(this)
+}
+
+// const james = new People('James', 29);
+// const nana = new People('Nana', 27);
+
+
+const james = new People('James', '12-05-1996');
+console.log(james.calculateAge());
+
+
+
+// *****string*****
+const name1 = 'jeff';
+const name2 = new String('jeff');
+
+// name2.foo = 'bar';
+// console.log(name2);
+
+console.log(typeof name2);
+
+if (name2 === 'jeff') {
+   console.log('YES');
+}
+else{
+   console.log('NO')
+}
+
+// numbers
+const num1 = 30;
+const num2 = new Number(5);
+
+// Boolean
+const bool1 = true;
+const bool2 = new Boolean(true);
+
+// function 
+const sumNum1 = function(x, y){
+   console.log(x + y);
+}
+const sumNum2 = new function(x, y){
+   console.log(x + y);
+}
+// const sumNum3 = new function('x', 'y', 'return 2 + 3')
+
+// object 
+const shabs1 = {name: 'Shabs'};
+const shabs2 = new Object({name: 'Shedrack'});
+
+// Array
+const bayo1 = [1,2,3,4,5];
+const bayo2 = new Array(1,2,3,4,5);
+
+// Regular Expressions
+const re1 = /\w+/;
+const re2 = new RegExp('\\w+');
+
+console.log(re2);
+
+
+
+// *****PROTOTYPE EXPRESSION*****
+ 
+// object Prototype...
+
+// person constructor // person prototype...
+function Person(firstName, lastName, dob) {
+   this.firstName = firstName;
+   this.lastName = lastName;
+   this.birthday = new Date(dob);
+   // this.calculateAge = function(){
+   //    const diff = Date.now() - this.birthday.getTime();
+   //    const ageDate = new Date(diff);
+   //    return Math.abs(ageDate.getUTCFullYear() - 1970);
+   // }
+}
+// Calculate Age
+Person.prototype.calculateAge = function(){
+   const diff = Date.now() - this.birthday.getTime();
+   const ageDate = new Date(diff);
+   return Math.abs(ageDate.getUTCFullYear() - 1970);
+}
+
+// get Full name
+Person.prototype.getFullName = function(){
+   return `${this.firstName} ${this.lastName}`;
+}
+
+// GEt married
+Person.prototype.getMarried = function(newLastName){
+   this.lastName = newLastName;
+}
+
+
+
+const john = new Person('john', 'nana', '6-12-96');
+const chalie = new Person('shabs', 'planta', '11-03-2000');
+
+console.log(john);
+console.log(john.calculateAge());
+console.log(chalie.getFullName());
+
+chalie.getMarried('Ajide');
+console.log(chalie.getFullName());
+
+console.log(chalie.hasOwnProperty('firstName'));
+console.log(chalie.hasOwnProperty('newLastName'));
+
+
+
+// *****PROTOTYPAL INHERITANCES*****
+// create a Person prototype.
+
+function Person(firstName, lastName){
+   this.firstName = firstName;
+   this.lastName = lastName;
+}
+
+// Greeting prototype
+Person.prototype.greeting = function(){
+   return `Hello ${this.firstName} ${this.lastName}`;
+}
+
+const mrWale = new Person('Ajide', 'Shedrack');
+
+console.log(mrWale.greeting());
+
+// Customer constructor...
+function Customer(firstName, lastName, phone, memberShip){
+   Person.call(this, firstName, lastName);
+
+   this.phone = phone;
+   this.memberShip = memberShip;
+}
+
+// greeting prototype for Customer constructor.
+Customer.prototype = Object.create(Person.prototype);
+// Make customer prototype return customer;
+Customer.prototype.constructor = Customer;
+
+
+const Customer1 = new Customer('James', 'Nana', '09090272746', 'Standard');
+
+console.log(Customer1);
+
+// OR create a New greeting prototype to Override.
+Customer.prototype.greeting = function(){
+   return `Hello ${this.firstName} ${this.lastName}, Welcome to SPcocktails.`
+}
+
+console.log(Customer1.greeting());
+
+
+
+
+// *****USING OBJECT.CREATE*****
+
+// create object prototype
+const personPrototypes = {
+   Greeting(){
+      return `Hello ${this.firstName} ${this.lastName}`;
+   },
+   getMarried: function(newLastname){
+      this.lastName = newLastname;
+   }
+}
+
+// first way of using the "OBJECT.CREATE"
+const person1 = Object.create(personPrototypes);
+person1.firstName = 'Ajide';
+person1.lastName = 'Shedrack';
+person1.age = 26;
+
+person1.getMarried('Nana');
+
+console.log(person1.Greeting());
+
+
+// Second way of using "OBJECT.CREATE"...
+const person2 = Object.create(personPrototypes, {
+   firstName: {value: 'Shabs'},
+   lastName: {value: 'Planta'},
+   age: {value: 26}
+});
+
+console.log(person2);
+console.log(person2.Greeting())
+
+
+
+
+// ***** ES6 CLASS *****
+// class Object prototype
+
+class person {
+   constructor(firsname, lastname, dob){
+      this.firsname = firsname;
+      this.lastname = lastname;
+      this.birthday = new Date(dob);
+   }
+
+   greeting(){
+      return `Hello ${this.firsname} ${this.lastname}`
+   }
+
+   calculateAge(){
+      const diff = new Date() - this.birthday.getTime();
+      const ageDate = new Date(diff);
+      return Math.abs(ageDate.getUTCFullYear() - 1970);
+   }
+
+   getMarried(newLastName){
+      this.lastname = newLastName;
+   }
+
+   static addNumbers(x, y){
+      return x + y;
+   }
+}
+
+const person1 = new person('Ajide', 'Shedrack', '05-12-1996');
+
+person1.getMarried('Nana')
+
+console.log(person1);
+console.log(person1.greeting());
+console.log(person1.calculateAge());
+console.log(person.addNumbers(2, 3));
+
+
+
+
+// ***** SUB CLASSES  is an inheritances*****
+class person {
+   constructor(firstName, lastName){
+      this.firstName = firstName;
+      this.lastName = lastName;
+   }
+
+   greeting(){
+      return `Hello ${this.firstName} ${this.lastName}.`;
+   }
+}
+
+class customer extends person {
+   constructor(firstName, lastName, phone, memberShip){
+      super(firstName, lastName)
+      this.phone = phone;
+      this.memberShip = memberShip;
+   }
+
+   static getMemberShipCost(){
+      return 500;
+   }
+}
+
+const customer1 = new customer('Ajide', 'Shedrack', '09090272746', 'Standard');
+
+console.log(customer1);
+console.log(customer1.greeting());
+console.log(customer.getMemberShipCost());
+
+
+
+///***** BOOK LIST APPLICATION *****
+
+*****///INDEX.HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" integrity="sha512-5fsy+3xG8N/1PV5MIJz9ZsWpkltijBI48gBzQ/Z2eVATePGHOkMIn+xTDHIfTZFVb9GMpflF2wOWItqxAP2oLQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <title>BookList Application</title>
+
+   <style>
+      .success, .error {
+         color: white;
+         padding: 5px;
+         margin: 5px 0px 15px 0px;
+      }
+
+      .success {
+         background-color: green;
+      }
+
+      .error {
+         background-color: red;
+      }
+
+      #book-list {
+         cursor: pointer;
+      }
+   </style>
+
+</head>
+
+<body>
+   <div class="container">
+
+      <h1>Add Book</h1>
+
+      <form id="book-form">
+         <div>
+            <label for="title">Title</label>
+            <input type="text" id="title" class="u-full-width" placeholder="Title">
+         </div>
+         <div>
+            <label for="author">Author</label>
+            <input type="text" id="author" class="u-full-width" placeholder="Full Name">
+         </div>
+         <div>
+            <label for="isbn">ISBN#</label>
+            <input type="number" id="isbn" class="u-full-width" placeholder="6 Digit Code">
+         </div>
+         <div>
+            <input type="submit" value="Submit" class="u-full-width">
+         </div>
+      </form>
+      <!-- <hr> -->
+
+
+
+      <table class="u-full-width">
+         <thead>
+            <tr>
+               <th>Title</th>
+               <th>Author</th>
+               <th>ISBN#</th>
+               <th></th>
+            </tr>
+         </thead>
+         <tbody id="book-list"></tbody>
+      </table>
+   </div>
+
+
+
+<script src="app.js"></script>
+</body>
+</html>
+
+
+***** APP.JS ES5 JAVASCRIPT *****
+// *****BOOK CONSTRUCTOR*****
+function Book(title, author, isbn) {
+   this.title = title;
+   this.author = author;
+   this.isbn = isbn;
+}
+
+// UI Constructor.
+function UI() {}
+
+// add book to list
+UI.prototype.addBookToList = function(bookObj){
+   // call the list UI or value
+   const bookList = document.getElementById('book-list');
+
+   // create a "tr" element
+   const row = document.createElement('tr');
+   // create inneHTML for the "tb"
+   row.innerHTML = `
+   <td>${bookObj.title}</td>
+   <td>${bookObj.author}</td>
+   <td>${bookObj.isbn}</td>
+   <td><a class="del-item">x</a></td>
+   `;
+   // AppendChild to Booklist Element
+   bookList.appendChild(row);
+
+   // console.log(bookList.value);
+}
+
+// validate book list and Alert...
+UI.prototype.showAlert = function(message, className){
+   // create a "div"
+   const div = document.createElement('div');
+   // add className to div
+   div.className = `alert ${className}`;
+   // add message to div by creating a text node & appendChild
+   div.appendChild(document.createTextNode(message));
+
+   // call parent Element
+   const container = document.querySelector('.container');
+   const form = document.querySelector('#book-form');
+
+   // inserting div
+   container.insertBefore(div, form);
+   // set timeout
+   setTimeout(function(){
+      document.querySelector('.alert').remove();
+   }, 3000);
+   // setTimeout('alert', 3000);
+
+}
+
+// delete Book List..
+UI.prototype.deleteBook = function(target) {
+   if (target.className === 'del-item'){
+      target.parentElement.parentElement.remove();
+   }
+}
+
+
+// ClearInput function or task
+UI.prototype.clearInput = function(){
+   document.getElementById('title').value = '';
+   document.getElementById('author').value = '';
+   document.getElementById('isbn').value = '';
+}
+
+getBooks = function() {
+   let books;
+
+      if (localStorage.getItem('books') === null) {
+         books = [];
+      }
+      else {
+         books = JSON.parse(localStorage.getItem('books'));
+      }
+
+      return books;
+}
+
+displayBooks = function() {
+   const books = getBooks();
+
+      books.forEach(function(bookObj){
+         const ui = new UI;
+
+         // add book to "ui"
+         ui.addBookToList(bookObj);
+      })
+}
+
+addBookToLocalStorage = function(bookObj) {
+   const books = getBooks();
+
+   books.push(bookObj);
+
+   localStorage.setItem('books', JSON.stringify(books));
+}
+
+
+
+// DOM load Event
+document.addEventListener('DOMContentLoaded', displayBooks);
+
+
+
+// EVENT LISTENER for add Book...
+document.querySelector('#book-form').addEventListener('submit', addBook);
+function addBook(e){
+   // console.log('Working...');
+   // ***** GET FORM VALUES *****
+   const UItitle = document.getElementById('title').value,
+         UIauthor = document.getElementById('author').value,
+         UIisbn = document.getElementById('isbn').value;
+
+   // instantiate book object
+   const bookObj = new Book(UItitle, UIauthor, UIisbn);
+
+   // instantiate UI
+   const ui = new UI();
+
+   
+
+   // validate 
+   if(UItitle === '' || UIauthor === '' || UIisbn === ''){
+      ui.showAlert('Please fill in all fields', 'error');
+   }
+   else {
+      // add Book to LIst
+      ui.addBookToList(bookObj);
+
+      // add local storage
+      addBookToLocalStorage(bookObj);
+
+      ui.showAlert('Added Successfully', 'success');
+
+      // clear input
+      ui.clearInput();
+
+   }
+
+   
+   e.preventDefault();
+}
+
+// Event listener for delete...
+document.querySelector('#book-list').addEventListener('click', delList);
+function delList(e){
+   // instantiate UI
+   const ui = new UI();
+
+   // add deleteBoot to prototype
+   ui.deleteBook(e.target);
+
+   // remove Book from "LS"
+   removeBook(e.target.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.textContent);
+
+   // add Alert
+   ui.showAlert('List Successfully deleted', 'success');
+
+   e.preventDefault();
+}
+
+// Remove Book list form "LS"
+removeBook = function(title) {
+   const books = getBooks();
+
+
+   books.forEach(function(bookObj, index){
+      if (bookObj.title === title){
+         books.splice(index, 1);
+      }
+   })
+
+   localStorage.setItem('books', JSON.stringify(books));
+}
+
+
+/////***** APP.JS ES6 JAVASCRIPT****
+
+// Book class contractor
+class Book {
+   constructor(title, author, isbn) {
+      this.title = title;
+      this.author = author;
+      this.isbn = isbn;
+   }
+}
+
+// UI class 
+class UI {
+   // Add to list
+   addBookToList(bookObj) {
+      // call the list UI or value
+      const bookList = document.getElementById('book-list');
+
+      // create a "tr" element
+      const row = document.createElement('tr');
+      // create inneHTML for the "tb"
+      row.innerHTML = `
+      <td>${bookObj.title}</td>
+      <td>${bookObj.author}</td>
+      <td>${bookObj.isbn}</td>
+      <td><a class="delete-item">x</a></td>
+      `;
+      // AppendChild to Booklist Element
+      bookList.appendChild(row);
+   }
+
+   showAlert(message, className) {
+      // create a "div"
+      const div = document.createElement('div');
+      // add className to div
+      div.className = `alert ${className}`;
+      // add message to div by creating a text node & appendChild
+      div.appendChild(document.createTextNode(message));
+
+      // call parent Element
+      const container = document.querySelector('.container');
+      const form = document.querySelector('#book-form');
+
+      // inserting div
+      container.insertBefore(div, form);
+      // set timeout
+      setTimeout(function(){
+         document.querySelector('.alert').remove();
+      }, 3000);
+   }
+
+   deleteBook(target) {
+      if (target.className === 'delete-item'){
+         target.parentElement.parentElement.remove();
+      }
+   }
+
+   clearInput() {
+      document.getElementById('title').value = '';
+      document.getElementById('author').value = '';
+      document.getElementById('isbn').value = '';
+   }
+}
+
+class store {
+   static getBooks() {
+      let books;
+
+      if (localStorage.getItem('books') === null) {
+         books = [];
+      }
+      else {
+         books = JSON.parse(localStorage.getItem('books'));
+      }
+
+      return books;
+   }
+
+   static displayBooks() {
+      const books = store.getBooks();
+
+      books.forEach(function(bookObj){
+         const ui = new UI;
+
+         // add book to "ui"
+         ui.addBookToList(bookObj);
+      })
+   }
+
+   static addBook(bookObj) {
+      const books = store.getBooks();
+
+      books.push(bookObj);
+
+      localStorage.setItem('books', JSON.stringify(books));
+   }
+
+   // Remove bookList for "LS"
+   static removeBook(isbn) {
+      let books = store.getBooks();
+
+      books.forEach(function(bookObj, index){
+         if (bookObj.isbn === isbn){
+            books.splice(index, 1);
+         }
+      })
+
+      localStorage.setItem('books', JSON.stringify(books));
+   }
+
+}
+
+// DOM load Event
+document.addEventListener('DOMContentLoaded', store.displayBooks);
+
+
+// EVENT LISTENER for add Book...
+document.querySelector('#book-form').addEventListener('submit', addBook);
+function addBook(e){
+   // console.log('Working...');
+   // ***** GET FORM VALUES *****
+   const UItitle = document.getElementById('title').value,
+         UIauthor = document.getElementById('author').value,
+         UIisbn = document.getElementById('isbn').value;
+
+   // instantiate book object
+   const bookObj = new Book(UItitle, UIauthor, UIisbn);
+
+   // instantiate UI
+   const ui = new UI();
+
+   
+
+   // validate 
+   if(UItitle === '' || UIauthor === '' || UIisbn === ''){
+      ui.showAlert('Please fill in all fields', 'error');
+   }
+   else {
+      // add Book to LIst
+      ui.addBookToList(bookObj);
+
+      // add local storage
+      store.addBook(bookObj);
+
+      ui.showAlert('Added Successfully', 'success');
+
+      // clear input
+      ui.clearInput();
+
+   }
+
+   
+   e.preventDefault();
+}
+
+// Event listener for delete...
+document.querySelector('#book-list').addEventListener('click', delList);
+function delList(e){
+   // instantiate UI
+   const ui = new UI();
+
+   // add deleteBoot to prototype
+   ui.deleteBook(e.target);
+
+   // remove Book from "LS"
+   store.removeBook(e.target.parentElement.previousElementSibling.textContent);
+
+   // add Alert
+   ui.showAlert('List Successfully deleted', 'success');
+
+   e.preventDefault();
+}
+
+
+*******************************
+
+WHAT IS ASYNCHRONOUS PROGRAMMING
+
+- Synchronous Code {
+posts = loadPostsSync();
+...wait till posts are fetched
+...do something with posts
+
+doTheNextThing(); //...has to wait until post load
+}
+
+- Asynchronous Code {
+loadpostsAsync(function() {
+...wait till posts are fetched
+...do something with posts
+});
+
+doTheNextThing(); //Doesn't have to wait utill posts load...
+}
+
+
+-----* Browser/Server APIs *
+  Most "Async" CODE you work with will be part of an API or Library
+
+* XMLHttpRequest & Fetch
+* jQuery Ajax, Axios, other HTTP Libraries
+* Nobe.js FS (filesystem) Module
+
+-----* Handling Async CODE *
+  There are a few ways to work with Async code
+
+* Callbacks
+* Promises
+* Async/Await
+
+
+
+=====*** WHAT IS AJAX?
+
+> Asynchronous Javascript & XML
+> Set of Web technologies
+> Send & Receive data asynchronously
+> Does Not interfere with the current Page
+> JSON has replaced XML for the most part.
+
+
+
+****** HOW Asynchronous Javascript and XML works ***
+
+> Make async requests in the background
+> No Page reload/refresh
+> fetch Data
+> Very Interactive
+
+
+    { Client/You <=> common Request <=> common response <=> JS call <=> AJAX Engine <=> XMLHttpRequest <=> XML/JSON <=> AJAX Engine <=> HTML Response }
+
+***** XmlHttpRequest (XHR) OBject ****
+
+> API in the form of an OBject
+> Provide By the Browsers JS enviroment
+> methods transfer data between client / serve
+> can be used with other protocols than HTTP
+> can work with data other than XML (JSON, Plain text)..
+
+**** Libraries & Other Methods *****
+
+> Fetch API
+> Axios
+> Superagent
+> JQuery
+> Node HTTP
+> Prototype......
+
+
+
+
+***** XMLHttpRequest *****
+
+// // create EVent listener
+// document.querySelector('#button').addEventListener('click', loadData);
+// function loadData() {
+
+//    // create an XHR object
+//    const xhr = new XMLHttpRequest();
+
+//    // OPEN
+//    xhr.open('GET', 'data.txt', true);
+
+//    // console.log('READYSTATE', xhr.readyState);
+
+//    // optional - used for Spinners/loader
+//    xhr.onprogress = function(){
+//       console.log('READYSTATE', xhr.readyState);
+//    }
+
+//    xhr.onload = function(){
+//       // console.log('READYSTATE', xhr.readyState);
+//       if(this.status === 200){
+//          // console.log(this.responseText);
+//          document.getElementById('output').innerHTML = `<h1>${this.responseText}</h1>`;
+//       }
+//    }
+
+   // xhr.onreadystatechange = function() {
+   //    if(this.status === 200 && this.readyState === 4) {
+   //       console.log(this.responseText);
+   //    }
+   // }
+
+   // xhr.onerror = function() {
+   //    console.log('Request error...')
+   // }
+
+   // xhr.send();
+
+
+   // readstate value
+   // - 0: request not initialized
+   // - 1: server connection established
+   // - 2: request received
+   // - 3: processing request
+   // - 4: request finished and response is ready
+
+   // HTTP statuses
+   // - 100: "continue"
+   // - 101: "Switching Protocols"
+   // - 102: "processing"
+   // - 200: "OK"
+   // - 403: "FORBIDDEN"
+   // - 404: "Error" or "NOT FOUND"
+   // - 408: "Request Timeout"
+
+
+   // KeyCode
+   // - key Enter = 13
+   // - key Tab = 9
+   // - key shift = 16
+   // - key Ctrl = 17
+// }
+
+
+****** // JSON: Javascript Object Notation *****
+
+***** INDEX.HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" integrity="sha512-5fsy+3xG8N/1PV5MIJz9ZsWpkltijBI48gBzQ/Z2eVATePGHOkMIn+xTDHIfTZFVb9GMpflF2wOWItqxAP2oLQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <title>AJAX SANDBOX</title>
+</head>
+<body>
+   <!-- <div class="container">
+      <button id="button">Get Data</button>
+      <br><br>
+      <div id="output"></div>
+   </div> -->
+   
+   <div class="container">
+      <button id="button1">Get Customer</button>
+      <button id="button2">Get Customer</button>
+      <br><br>
+      <h1>Customer</h1>
+      <div id="customer"></div>
+      <h1>Customers</h1>
+      <div id="customers"></div>
+   </div>
+
+
+<script src="app.js"></script>
+</body>
+</html>
+
+**** CUSTOMER.JSON
+{
+   "id": 1,
+   "name": "Shas Planta",
+   "company": "Dangote",
+   "phone": "09090272746"
+}
+
+***** CUSTOMERS.JSON
+[
+   {
+      "id": 1,
+      "name": "Shabs Planta",
+      "company": "Dangote",
+      "phone": "09090272746"
+   },
+   {
+      "id": 2,
+      "name": "James Nana",
+      "company": "SPcocktails",
+      "phone": "07086535675"
+   },
+   {
+      "id": 3,
+      "name": "Chalie Main",
+      "company": "Planta Production",
+      "phone": "08137872680"
+   }
+]
+
+
+***** APP.JS
+// create event listeners
+document.querySelector('#button1').addEventListener('click', loadCustomer);
+document.querySelector('#button2').addEventListener('click', loadCustomers);
+
+
+// load customer Event
+function loadCustomer(e) {
+   const xhr = new XMLHttpRequest;
+
+   xhr.open('GET', 'customer.json', true);
+
+   xhr.onload = function() {
+      if(this.status === 200){
+         // console.log(this.responseText);
+         const customer = JSON.parse(this.responseText);
+         const output = `
+         <ul>
+           <li>ID: ${customer.id}</li>
+           <li>NAME: ${customer.name}</li>
+           <li>COMPANY: ${customer.company}</li>
+           <li>PHONE: ${customer.phone}</li>
+         </ul>
+         `;
+
+         document.getElementById('customer').innerHTML = output;
+      }
+   }
+
+   xhr.send();
+}
+
+
+// load customers Event
+function loadCustomers(e) {
+   const xhr = new XMLHttpRequest;
+
+   xhr.open('GET', 'customers.json', true);
+
+   xhr.onload = function() {
+      if(this.status === 200){
+         // console.log(this.responseText);
+         const customers = JSON.parse(this.responseText);
+         
+         let output =  ``;
+
+         customers.forEach(function(customer) {
+            output += `
+         <ul>
+           <li>ID: ${customer.id}</li>
+           <li>NAME: ${customer.name}</li>
+           <li>COMPANY: ${customer.company}</li>
+           <li>PHONE: ${customer.phone}</li>
+         </ul>
+         `;
+         })
+
+         document.getElementById('customers').innerHTML = output;
+      }
+   }
+
+   xhr.send();
+}
+
+
+
+*******>>>> WHAT IS AN "API" <<<<*****
+
+ API: Application Programming Interface
+- Contract provided by one piece of software to another
+- Structured request and response 
+- We just Worked with an API that takes a request and responds with jokes.
+
+*****>>> WHAT IS REST APIS <<<****
+
+ REST: Representational State Transfer
+- Architecture style for designing networked applications
+- Relies on a stateless, client-server protocol, almost always HTTP
+- Treats server objects as resources that can be created or destroyed
+- Can be used by virtually any programming language
+- All APIS have their own rules and structure.
+
+    {always remeber API is the messager, why REST lets us use the HTTP Request to format that message.}
+
+
+------HTTP Requests
+1. GET: Retrieve data from a specified resource >>>>> { GET - https://someurl.com/api/users    // Get all users } == { GET - https://someurl.com/api/users/1    // Get single users }
+
+2. POST: Submit data to be processed to a specified resource >>>>> { POST - https://someurl.com/api/users    // Add user }
+
+3. PUT: Update a specified resource >>>>> { PUT - https://someurl.com/api/users/1    // Update user }
+
+4. DELETE: Delete a specified resource >>>>> { DELETE - https://someurl.com/api/users/1    // Delete user }
+
+
+5. HEAD: Same as get but does not return a body
+6. OPTIONS: Returns the supported HTTP methods
+7. PATCH: Update partial resources.
+
+
+
+???????///// TWO JS WAS ADDED TO ONE INDEX.HTML <<<<<<<
+
+
+>>>FIRST JS
+
+// ***** ES5 Class *****
+function easyHTTP() {
+   this.http = new XMLHttpRequest();
+}
+
+// Make an Http "GET" Request
+easyHTTP.prototype.get = function(url, callback) {
+   this.http.open('GET', url, true);
+
+   // // Make Get Request, "get request" only...
+   // let self = this;
+   // this.http.onload = function() {
+   //    if(self.http.status === 200) {
+   //       callback(self.http.responseText);
+   //    }
+   // }
+
+   // Make Get Request, "get request" and send "Error" if the source is error... 
+   let self = this;
+   this.http.onload = function() {
+      if(self.http.status === 200) {
+         callback(null, self.http.responseText);
+      }
+      else {
+         callback('Error: ' + self.http.status);
+      }
+   }
+
+
+   this.http.send()
+} 
+
+
+// Make an Http "POST" Request
+easyHTTP.prototype.post = function(url, data, callback) {
+   this.http.open('POST', url, true);
+   this.http.setRequestHeader('content-type', 'application/json');
+
+   let self = this;
+   this.http.onload = function() {
+      callback(null, self.http.responseText);
+   }
+
+
+   this.http.send(JSON.stringify(data));
+}
+
+
+// Make an Http "PUT" Request
+easyHTTP.prototype.put = function(url, data, callback) {
+   this.http.open('PUT', url, true);
+   this.http.setRequestHeader('content-type', 'application/json');
+
+   let self = this;
+   this.http.onload = function() {
+      callback(null, self.http.responseText);
+   }
+
+
+   this.http.send(JSON.stringify(data));
+}
+
+
+// Make an Http "DELETE" Request
+easyHTTP.prototype.delete = function(url, callback) {
+   this.http.open('DELETE', url, true);
+
+   // // Make Delete Request, "Delete request" only...
+   // let self = this;
+   // this.http.onload = function() {
+   //    if(self.http.status === 200) {
+   //       callback('Response Deleted');
+   //    }
+   // }
+
+   // Make Delete Request, "Delete request" and send "Error" if the source is error... 
+   let self = this;
+   this.http.onload = function() {
+      if(self.http.status === 200) {
+         callback(null, 'Response Deleted');
+      }
+      else {
+         callback('Error: ' + self.http.status);
+      }
+   }
+
+
+   this.http.send()
+} 
+
+
+>>>>>>>>> SECOND JS
+
+const http = new easyHTTP();
+
+
+// >>> Asynchronously
+
+// const posts = http.get('https://jsonplaceholder.typicode.com/posts');
+// console.log(posts); it's undefined
+
+
+// >>> Synchronously 
+
+// // to make 'post' function
+// http.get('https://jsonplaceholder.typicode.com/posts', 
+// function(err, posts){
+//    console.log(posts);
+// });
+
+
+// // To make error "function".....err
+// http.get('https://jsonplaceholder.typicode.com/posts1', 
+// function(err, posts){
+//    if(err){
+//       console.log(err);
+//    }
+//    else {
+//       console.log(posts);
+//    }
+// });
+
+
+
+// // To make both "Error and Posts" function While been uses...
+// http.get('https://jsonplaceholder.typicode.com/posts', 
+// function(err, posts){
+//    if(err){
+//       console.log(err);
+//    }
+//    else {
+//       console.log(posts);
+//    }
+// });
+
+
+// // GET a single Post Request.
+// http.get('https://jsonplaceholder.typicode.com/posts/1', 
+// function(err, posts){
+//    if(err){
+//       console.log(err);
+//    }
+//    else {
+//       console.log(posts);
+//    }
+// });
+
+
+// // ***** POST REQUEST... *****
+// // First Create Data.
+// const data = {
+//    title: 'Custom Post',
+//    body: 'The custom body post'
+// };
+
+// // Second Create Post.
+// http.post('https://jsonplaceholder.typicode.com/posts', data, 
+// function(err, posts){
+//       if(err){
+//          console.log(err);
+//       }
+//       else {
+//          console.log(posts);
+//       }
+// });
+
+
+// // ***** PUT REQUEST... *****
+// // First Create Data.
+// const data = {
+//    title: 'Custom Post',
+//    body: 'The custom body post'
+// };
+
+// // Second Create Post.
+// http.put('https://jsonplaceholder.typicode.com/posts/1', data, 
+// function(err, posts){
+//       if(err){
+//          console.log(err);
+//       }
+//       else {
+//          console.log(posts);
+//       }
+// });
+
+
+// // ***** DELETE REQUEST... *****
+// // to make 'Delete' function without no else..
+// http.delete('https://jsonplaceholder.typicode.com/posts/1', 
+// function(Responses){
+//    console.log(Responses);
+// });
+
+// To make both "Error and Delete" function While been uses...
+http.delete('https://jsonplaceholder.typicode.com/posts/1', 
+function(err, posts){
+   if(err){
+      console.log(err);
+   }
+   else {
+      console.log(posts);
+   }
+});
+
+
+
+
+IN A FUNCTION WE HAVE:
+1. Call Function
+2. Call Premerital
+
+
+// *****>>>>> ES6 Promises <<<<<*****
+// ***** When you want to create a "Promise" *****
+//  Create "post"...
+const posts = [
+   {title: 'Post one', body: 'This is post one'},
+   {title: 'Post two', body: 'This is post two'}
+];
+
+
+// // function for the "future post"...and make only resolve "function".
+// function createPost(post) {
+//    return new Promise(function(resolve, reject){
+//       setTimeout(function() {
+//          posts.push(post);
+//          resolve();
+//       }, 2000);
+//    })
+// }
+
+// function for the "future post"...and make resolve & reject "function".
+function createPost(post) {
+   return new Promise(function(resolve, reject){
+      setTimeout(function() {
+         posts.push(post);
+
+         const error = false;
+         if (!error) {
+            resolve();
+         }
+         else {
+            reject('Error: Something went wrong');
+         }
+      }, 2000);
+   })
+}
+
+
+// function for the "Post created".......
+function getPost() {
+   setTimeout(function() {
+      let output = '';
+      posts.forEach(function(post){
+         output += `<li>${post.title}</li>`;
+      })
+
+      document.body.innerHTML = output;
+   }, 1000)
+}
+
+// "future post"...inside it's function
+createPost({title: 'Post three', body: 'This is post three'})
+.then(getPost)
+.catch(function(err){
+   console.log(err);
+});
+
+
+
+
+//////////>>>>>>>>>>       FETCH API SANDBOX      ********************ES6 function.
+
+***** INDEX.HTML *****
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" integrity="sha512-5fsy+3xG8N/1PV5MIJz9ZsWpkltijBI48gBzQ/Z2eVATePGHOkMIn+xTDHIfTZFVb9GMpflF2wOWItqxAP2oLQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <title>Fetch API Sandbox</title>
+</head>
+
+
+<body>
+<div class="container">
+   <h1>FETCH API SANDBOX</h1>
+   <button id="button1">Get Text</button>
+   <button id="button2">Get JSON</button>
+   <button id="button3">Get API Data</button>
+   <br><br>
+   <div id="output"></div>
+</div>
+
+<div class="container">
+   <h1>Arrow Function</h1>
+   <div class="output1"></div>
+</div>
+   
+
+<script src="app.js"></script>
+</body>
+</html>
+
+
+
+
+******** POST.JSON *****
+[
+   {"title": "Post One",
+    "body": "This is post One"},
+
+   {"title": "Post Two",
+    "body": "This is post Two"},
+
+   {"title": "Post Three",
+    "body": "This is post Three"}
+]
+
+
+
+
+***** TEXT.TNT ******
+This is a sample for a ES6 Fetch API Sandbox...
+
+
+
+
+***** APP.JS .....JAVASCRIPTS
+
+// Getting Text With "FETCH"
+
+document.getElementById('button1').addEventListener('click', getText);
+
+document.getElementById('button2').addEventListener('click', getJson);
+
+document.getElementById('button3').addEventListener('click', getExternal);
+
+// // get local "text.tnt" Data...
+// function getText() {
+//    fetch('text.tnt')
+//     .then(function(res){
+//       return res.text();
+//    })
+//    .then(function(data){
+//       console.log(data);
+//       document.getElementById('output').innerHTML = `<li>${data}</li>`;
+//    })
+//    .catch(function(err){
+//       console.log(err);
+//    })
+// };
+
+
+// // get local "post.Json" Data...
+// function getJson() {
+//    fetch('post.json')
+//    .then(function(res){
+//       console.log(res)
+//       return res.json();
+//    })
+//    .then(function(data){
+//       console.log(data);
+//       let output = '';
+//       data.forEach(function(post){
+//          output += `
+//           <li>${post.title}</li>
+//          `;
+//       })
+//       console.log(output);
+//       document.getElementById('output').innerHTML = output;
+//    })
+//    .catch(function(err){
+//       console.log(err);
+//    })
+// }
+
+
+// // get from External API Data...
+// function getExternal() {
+//    fetch('https://api.github.com/users')
+//    .then(function(res){
+//       return res.json();
+//    })
+//    .then(function(data){
+//       console.log(data);
+//       let output = '';
+//       data.forEach(function(user){
+//          output += `
+//           <li>${user.login}</li>
+//          `;
+//       })
+//       // console.log(output);
+//       document.getElementById('output').innerHTML = output;
+//    })
+//    .catch(function(err){
+//       console.log(err);
+//    })
+// }
+
+
+
+
+// //    ***** CS6 ARROW FUNCTION *****     <<<<<
+// get local "text.tnt" Data...
+function getText() {
+   fetch('text.tnt')
+    .then( res => res.text())
+   .then( data => document.getElementById('output').innerHTML = `${data}`)
+   .catch( err => console.log(err))
+};
+
+
+// get local "post.Json" Data...
+function getJson() {
+   fetch('post.json')
+   .then( res => res.json())
+   .then( data => {
+      console.log(data);
+      let output = '';
+      data.forEach(function(post){
+         output += `
+          <li>${post.title}</li>
+         `;
+      })
+      console.log(output);
+      document.getElementById('output').innerHTML = output;
+   })
+   .catch(err => console.log(err));
+}
+
+
+// get from External API Data...
+function getExternal() {
+   fetch('https://api.github.com/users')
+   .then(res => res.json())
+   .then(data => {
+      console.log(data);
+      let output = '';
+      data.forEach(function(user){
+         output += `
+          <li>${user.login}</li>
+         `;
+      })
+      // console.log(output);
+      document.getElementById('output').innerHTML = output;
+   })
+   .catch( err => console.log(err))
+}
+
+
+
+
+
+
+
+// Error Handling with Fetch...
+
+fetch('https://api.github.com/users').then(res => res.json)
+.then(res => {
+   if (!res.ok) {
+      throw new Error(res.error);
+   }
+   return res;
+}).catch(err => console.log(err));
+
+
+// I would suggest creating a separate fuction for error handling
+
+function handleError(res) {
+   if (!res.ok) {
+      throw new Error(res.error);
+   }
+   return res;
+}
+
+fetch('post.json').then(function(res){
+   return res.json()
+}).then(handleError).then(function(res){
+   console.log(res.data);
+}).catch(function(err){
+   console.log(err);
+});
+
+
+// fetch('post.json')
+// .then(function(res){
+//    console.log(res);
+//    return res.json();
+// }).then(function(data){
+//    console.log(data)
+//    let output = '';
+//    data.forEach(function(post){
+//       output += `
+//        <li>${post.body}</li>
+//       `;
+//    })
+//    console.log(output);
+// });
+
+
+
+
+
+//     ***    ARROW FUNCTION...   ***
+
+// const sayHello = function() {
+//    console.log('Hello');
+// }
+
+// const sayHello = () => {
+//    console.log('Hello');
+// }
+
+
+// // ***** ONE LINE FUNCTIONS DOES NOT NEED BRACES
+// const sayHello = () => console.log('Hello Man')
+
+// // ***** ONE LINE FUNCTION FOR "RETURN FUNcTION"
+// const sayHello = () => 'Hello';
+
+// // ***** SAME AS ABOVE
+// const sayHello = function() {
+//    return 'Hello Above';
+// }
+
+// //  ***** ONE LINE FUNCTION FOR AN OBJECT
+// const sayHello = () => ({msg: 'Hello Shabs'});
+
+// // SINGLE PARAM WITH PARENTHESIS...
+// const sayHello = (name) => console.log(`Hello ${name}`)
+
+//// SINGLE PARAM DOES NOT NEED PARENTHESIS...
+// const sayHello = name => console.log(`Hello ${name}`);
+
+//// MULTUIPLE PARAMs NEED PARENTHESIS...
+// const sayHello = (firstName, lastName) => console.log(`Hello ${firstName} ${lastName}`);
+
+// const sayHello = (firstName, lastName) => `Hello ${firstName} ${lastName}`;
+
+// // Call Back FUNCTION...
+const users1 = ['human', 'animal', 'plants'];
+users1.push('Gangster');
+users1.unshift(['name', 'place', 'things']);
+users1.pop();
+users1.shift();
+
+// const nameLength = users1.map(function(list){
+//    return list.length;
+// });
+
+// // SHORTER...
+// const nameLength = users1.map((list) => {
+//   return list.length;
+// })
+
+// // SHORTEST...
+const nameLength = users1.map(list => list.length);
+
+
+
+// sayHello();
+// console.log(sayHello());
+// let post = sayHello('Shabs', 'Planta');
+// document.querySelector('.output1').innerHTML = post;
+
+console.log(nameLength);
+document.querySelector('.output1').innerHTML = nameLength;
+
+
+
+
+????+++++   ******* ASYNC & AWAIT ******
+// function myFunc() {
+//    return 'Hello There';
+// }
+
+// console.log(myFunc());
+
+
+// async function myFunc() {
+//    return 'Hello There';
+// }
+
+// myFunc().then(res => console.log(res));
+
+
+// // // ES7 NEW PROMISE WITHOUT ERROR FUNCTION
+// async function myFunc() {
+//    const promise = new Promise((resolve, reject) => {
+//       setTimeout(() => {
+//          resolve('Hello World')
+//       }, 2000)
+//    })
+
+//    const res = await promise;
+//    return res;
+// }
+
+// myFunc().then(res => console.log(res));
+
+
+// // // ES7 NEW PROMISE WITH ERROR FUNCTION
+// async function myFunc() {
+//    const promise = new Promise((resolve, reject) => {
+//       setTimeout(() => {
+//          resolve('Hello World')
+//       }, 2000)
+//    })
+
+//    const error = true;
+//    if (!error){
+//       const res = await promise;
+//       return res;
+//    }
+//    else {
+//       await promise.reject(new Error('Something Went Wrong...'))
+//    }
+// }
+
+// myFunc()
+// .then(res => console.log(res))
+// .catch(err => console.log(err));
+
+
+
+// // ES7 NEW PROMISE WITH ERROR FUNCTION
+async function getData() {
+   // Await Users of the Fetch Call...
+   const users = await fetch('https://jsonplaceholder.typicode.com/users');
+   // Await proceed once its resolved..
+   const data = await users.json();
+   // Only proceed once Second Promise is resolved...
+   return data;
+};
+
+getData().then(users => console.log(users));
+
+
+FULL MEANINGS...
+
+URL: Uniform Resource Locator.
